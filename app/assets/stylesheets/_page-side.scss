@@ -6,6 +6,8 @@
     display: flex;
     align-items: center;
     &__box {
+      display: flex;
+      justify-content: space-between;
       height: 20px;
       width: 260px;
       background-color: #ffffff;
