@@ -1,0 +1,26 @@
+.page-side {
+  width: 300px;
+  .side-header {
+    height: 100px;
+    background-color: #39d192;
+    display: flex;
+    align-items: center;
+    &__box {
+      height: 20px;
+      width: 260px;
+      background-color: #ffffff;
+      margin: 0 20px;
+    }
+  }
+  .side-items {
+    height: calc(100vh - 100px);
+    background-color: #125fc4;
+    &__box {
+      padding: 0 20px;
+      &__itemname {
+        font-size: 15px;
+        padding-top: 20px;
+      }
+    }
+  }
+}

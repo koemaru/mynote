@@ -1,0 +1,19 @@
+.page-main
+  .main-header
+    .main-header__box
+      -# -# %p.main-header__box__title
+      -# -#   = "件名："
+      -# %p.main-header__box__trash
+      -#   = "削除"
+  .main-pages
+    .form
+      %form.new_pages
+        .input-box
+          %input{type: "text", class: "input-box__title",placeholder: "タイトル"}
+          .input-box__post
+            %textarea{class: "input-box__post__text", placeholder: "ここにノートを取りましょう"}
+            .input-box__post__function
+              %label{class: "input-box__post__function__image"}
+                = icon('fas', 'image')
+                %input{type: "file", class: "input-box__post__function__image--file"}
+              %input{type: "submit", class: "input-box__post__function__btn", value: "投稿"}
