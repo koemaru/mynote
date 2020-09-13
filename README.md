@@ -38,7 +38,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |title|string||
-|text|text||
+|text|text|null :false|
 |image|string||
 |note_id|integer|null :false, foreign_key:true|
 |user_id|integer|null :false, foreign_key: true|
@@ -53,4 +53,4 @@ Things you may want to cover:
 |user_id|integer|null :false, foreign_key: true|
 ### Association
 - has_many :pages
-- belongs_to :users
+- belongs_to :user
