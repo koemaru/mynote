@@ -27,6 +27,7 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
+|name|string|null: false|
 |email|string|null: false, unique: true|
 |password|string|null: false|
 ### Association
@@ -36,8 +37,10 @@ Things you may want to cover:
 ## pagesテーブル
 |Column|Type|Options|
 |------|----|-------|
+|title|string||
 |text|text||
 |image|string||
+|note_id|integer|null :false, foreign_key:true|
 |user_id|integer|null :false, foreign_key: true|
 ### Association
 - belongs_to :user
@@ -46,7 +49,8 @@ Things you may want to cover:
 ## notesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|string|null: false, unique: true|
+|name|string|null: false, unique: true|
+|user_id|integer|null :false, foreign_key: true|
 ### Association
 - has_many :pages
 - belongs_to :users
