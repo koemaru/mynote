@@ -2,7 +2,10 @@
   .side-header
     .side-header__box
       %p.side-header__box__username
-        = "hayashi"
+        = current_user.name
+      %p.side-header__box__edit
+        = link_to "編集", edit_user_path(current_user)
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
   .side-items
     .side-items__box
       %p.side-items__box__itemname
