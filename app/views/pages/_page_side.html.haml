@@ -9,6 +9,9 @@
   .side-items
     .side-items__box
       %p.side-items__box__itemname
-        = "プログラミング"
-      %p.side-items__box__itemname
-        = "旅行"
+        = link_to "⭐️ノート作成", new_note_path
+      - current_user.notes.each do |note|
+        .Note
+          = link_to '#' do
+            .Note__name
+              = note.name
