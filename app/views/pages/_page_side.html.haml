@@ -11,7 +11,9 @@
       %p.side-items__box__itemname
         = link_to "⭐️ノート作成", new_note_path
       - current_user.notes.each do |note|
-        .Note
-          = link_to '#' do
-            .Note__name
+        .note
+          = link_to note_pages_path(note) do
+            .note__name
               = note.name
+              = link_to "編集", edit_note_path(note.id)
+              = link_to "削除", note_path(note.id),method: :delete

@@ -1,28 +1,32 @@
 .AccountPage {
-  width: 980px;
+  width: 580px;
+  height: 670px;
   margin: 60px auto;
-  padding: 60px;
-  background-color: #fff;
+  padding: 60px 0px;
+  background-color: rgb(255, 255, 247);
   border: 1px solid #ddd;
   border-radius: 5px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 .AccountPage__title {
   width: 50%;
   font-size: 14px;
   font-weight: 200;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   h2 {
     margin-bottom: 10px;
     letter-spacing: 3px;
     font-size: 40px;
+    color: #000;
     &:after {
       content: "";
       display: block;
       width: 60px;
       margin-top: 5px;
-      border-bottom: 1px solid #38aef0;
     }
   }
 
@@ -92,7 +96,8 @@
 .UserButton {
   margin-top: 20px;
   color: #fff;
-  background-color: #38aef0;
+  background-color: #34a375;
+
 }
 
 #error_explanation {

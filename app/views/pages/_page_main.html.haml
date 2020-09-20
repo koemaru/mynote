@@ -1,19 +1,28 @@
 .page-main
   .main-header
-    .main-header__box
-      -# -# %p.main-header__box__title
+    %p.main-header__new
+      = link_to '新規作成', new_note_page_path(@note)
+      -# %p.main-header__box__title
       -# -#   = "件名："
       -# %p.main-header__box__trash
       -#   = "削除"
+    = form_with url: search_note_pages_path, html: {class: ""}, method: :get, local: true do |f|
+      = f.text_field :keyword, class: "", placeholder: "検索"
+      = f.submit "検索", class: ""
   .main-pages
-    .form
-      %form.new_pages
-        .input-box
-          %input{type: "text", class: "input-box__title",placeholder: "タイトル", autofocus: true}
-          .input-box__post
-            %textarea{class: "input-box__post__text", placeholder: "ここにノートを取りましょう"}
-            .input-box__post__function
-              %label{class: "input-box__post__function__image"}
-                = icon('fas', 'image')
-                %input{type: "file", class: "input-box__post__function__image--file"}
-              %input{type: "submit", class: "input-box__post__function__btn", value: "投稿"}
+    = render @pages
+    -# - @pages.each do |page|
+    -#   = page.title
+    -#   = page.text
+  -# .main-pages
+  -#   .form
+  -#     = form_with model: [@note, @page], html: {class: "new_pages"}, local: true do |f|
+  -#       .input-box
+  -#         = f.text_field :title, class: 'input-box__title', placeholder: 'タイトル', autofocus: true
+  -#         .input-box__post
+  -#           = f.text_area :text, class: 'input-box__post__text', placeholder: 'ここにノートを取りましょう'
+  -#           .input-box__post__function
+  -#             = f.label :image, class: 'input-box__post__function__image' do
+  -#               = icon('far', 'image')
+  -#               = f.file_field :image, class: 'input-box__post__function__image--file'
+  -#             = f.submit '投稿', class: 'input-box__post__function__btn'
