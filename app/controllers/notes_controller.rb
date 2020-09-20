@@ -29,6 +29,11 @@ class NotesController < ApplicationController
     end
   end
 
+  def destroy
+    note = Note.find(params[:id])
+    note.destroy
+  end
+
   private
   def note_params
     params.require(:note).permit(:name).merge(user_id: current_user.id)

@@ -38,10 +38,10 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |title|string||
-|text|text|null :false|
+|text|text|null: false|
 |image|string||
-|note_id|integer|null :false, foreign_key:true|
-|user_id|integer|null :false, foreign_key: true|
+|note_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :note
@@ -49,8 +49,8 @@ Things you may want to cover:
 ## notesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true|
-|user_id|integer|null :false, foreign_key: true|
+|name|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :pages
 - belongs_to :user
