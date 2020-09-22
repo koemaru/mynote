@@ -1,21 +1,21 @@
 .page-box
-  .page-title
-    .page-title__name
-      %p.page-title__name--text
-      = "タイトル："
+  .page-box__header
+    %p.page-box__header--title
       = page.title
-      = link_to "削除", note_page_path(@note, page.id), method: :delete
-      = link_to "編集", edit_note_page_path(@note, page.id), method: :get
-    .page-title__date
-      %p.page-title__date--create
+    .page-box__header--parts
+      = link_to edit_note_page_path(@note, page.id), method: :get do
+        = icon('far', 'edit')
+      = link_to note_page_path(@note, page.id), method: :delete do
+        = icon('far', 'trash-alt')
+  .page-box__date
+    %p.page-box__date--create
       = "作成日時"
       = page.created_at.strftime("%Y年%m月%d日 %H時%M分")
-      %p.page-title__date--update
-      = "作成日時"
+    %p.page-box__date--update
+      = "更新日時"
       = page.updated_at.strftime("%Y年%m月%d日 %H時%M分")
-  .page-text
+  .page-box__text
     - if page.text.present?
-      %p.page-text__content
-      = "内容："
+      %p.page-box__text--content
       = page.text
-    = image_tag page.image.url, class: 'page-text__image' if page.image.present?
+    = image_tag page.image.url, class: 'page-box__text--image' if page.image.present?
