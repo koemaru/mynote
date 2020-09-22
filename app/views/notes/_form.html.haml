@@ -5,5 +5,5 @@
       %ul
         - note.errors.full_messages.each do |message|
           %li= message
-  = f.text_field :name, class: "SettingGroupForm__input", placeholder: "ノート名を入力してください（編集）"
+  = f.text_field :name, class: "SettingGroupForm__input", placeholder: "ノート名を入力してください"
   = f.submit "Save", class: "SettingGroupForm__button"

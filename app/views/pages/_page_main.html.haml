@@ -1,14 +1,12 @@
 .page-main
   .main-header
     %p.main-header__new
-      = link_to '新規作成', new_note_page_path(@note)
-      -# %p.main-header__box__title
-      -# -#   = "件名："
-      -# %p.main-header__box__trash
-      -#   = "削除"
-    = form_with url: search_note_pages_path, html: {class: ""}, method: :get, local: true do |f|
-      = f.text_field :keyword, class: "", placeholder: "検索"
-      = f.submit "検索", class: ""
+      = link_to new_note_page_path(@note) do
+        = "新規ページ作成"
+        = icon('far', 'file-alt')
+    = form_with url: search_note_pages_path, html: {class: "main-header__search"}, method: :get, local: true do |f|
+      = f.text_field :keyword, class: "main-header__search--box", placeholder: "検索"
+      = f.submit "検索", class: "main-header__search--submit"
   .main-pages
     = render @pages
     -# - @pages.each do |page|

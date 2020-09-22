@@ -3,7 +3,7 @@
   height: 670px;
   margin: 60px auto;
   padding: 60px 0px;
-  background-color: rgb(255, 255, 247);
+  background-color: #fffff7;
   border: 1px solid #ddd;
   border-radius: 5px;
   display: flex;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 .AccountPage__title {
-  width: 50%;
+  width: 80%;
   font-size: 14px;
   font-weight: 200;
   display: flex;
@@ -29,14 +29,16 @@
       margin-top: 5px;
     }
   }
-
-  .Button {
-    margin-top: 40px;
-    color: #fff;
-    background-color: #ccc;
-  }
 }
 
+.AccountPage__link {
+  width: 50%;
+  .Button {
+  margin-top: 40px;
+  color: #fff;
+  background-color: #ccc;
+  }
+}
 .AccountPage__form {
   width: 50%;
 }
@@ -84,19 +86,20 @@
 .Button {
   display: inline-block;
   height: 50px;
+  width: 100%;
   padding: 0 30px;
   line-height: 50px;
   letter-spacing: 1px;
   text-align: center;
   border: none;
-  border-radius: 2px;
+  border-radius: 5px;
   text-decoration: none;
 }
 
 .UserButton {
   margin-top: 20px;
   color: #fff;
-  background-color: #34a375;
+  background-color:  #e67c35;
 
 }
 
@@ -124,3 +127,4 @@
     font-size: 13px;
   }
 }
+

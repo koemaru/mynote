@@ -16,7 +16,9 @@ class PagesController < ApplicationController
 
   def destroy
     page = Page.find(params[:id])
+    @note = page["note_id"]
     page.destroy
+    redirect_to note_pages_path(@note)
   end
   
   def edit
@@ -27,6 +29,7 @@ class PagesController < ApplicationController
   def update
     page = Page.find(params[:id])
     page.update(pages_params)
+    redirect_to note_pages_path(@note)
   end
 
   def create

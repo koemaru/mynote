@@ -3,17 +3,28 @@
     .side-header__box
       %p.side-header__box__username
         = current_user.name
-      %p.side-header__box__edit
-        = link_to "編集", edit_user_path(current_user)
-        = link_to "ログアウト", destroy_user_session_path, method: :delete
+      .side-header__box__right
+        %span.side-header__box__right--arrow
+          = image_tag src="/assets/arrow_top.png"
+        %ul.side-header__box__right--list
+          %li
+            = link_to "編集", edit_user_path(current_user)
+          %li
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+      -# %p.side-header__box__edit
+      -#   = link_to "編集", edit_user_path(current_user)
+      -#   = link_to "ログアウト", destroy_user_session_path, method: :delete
   .side-items
     .side-items__box
       %p.side-items__box__itemname
-        = link_to "⭐️ノート作成", new_note_path
+        = link_to "新規ノート作成", new_note_path
       - current_user.notes.each do |note|
         .note
           = link_to note_pages_path(note) do
             .note__name
               = note.name
-              = link_to "編集", edit_note_path(note.id)
-              = link_to "削除", note_path(note.id),method: :delete
+            .note__parts
+              = link_to edit_note_path(note.id) do
+                = icon('far', 'edit')
+              = link_to note_path(note.id),method: :delete do
+                = icon('far', 'trash-alt')
