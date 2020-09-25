@@ -1,11 +1,11 @@
 .edit-pages
   .form
     .form__title
-      %h1 ノートの編集
+      %h1 ページの編集
     = form_with model: [@note, @page], html: {class: "input-box"}, local: true do |f|
-      = f.text_field :title, class: 'input-box__title', placeholder: 'タイトル', autofocus: true
+      = f.text_field :title, class: 'input-box__title', autofocus: true
       .input-box__post
-        = f.text_area :text, class: 'input-box__post__text', placeholder: 'ここにノートを取りましょう'
+        = f.text_area :text, class: 'input-box__post__text'
         .input-box__post__function
           = f.label :image, class: 'input-box__post__function__image' do
             = icon('far', 'image')

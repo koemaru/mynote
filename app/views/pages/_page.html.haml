@@ -17,5 +17,5 @@
   .page-box__text
     - if page.text.present?
       %p.page-box__text--content
-      = page.text
+      = safe_join(page.text.split("\n"),tag(:br))
     = image_tag page.image.url, class: 'page-box__text--image' if page.image.present?
