@@ -1,7 +1,7 @@
 .new-pages
   .form
     .form__title
-      %h1 ノートの作成
+      %h1 ページの作成
     = form_with model: [@note, @page], html: {class: "input-box"}, local: true do |f|
       = f.text_field :title, class: 'input-box__title', placeholder: 'タイトル', autofocus: true
       .input-box__post
