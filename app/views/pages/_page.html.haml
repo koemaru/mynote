@@ -17,5 +17,5 @@
   .page-box__text
     - if page.text.present?
       %p.page-box__text--content
-      = safe_join(page.text.split("\n"),tag(:br))
+      = raw Rinku.auto_link(safe_join(page.text.split("\n"),tag(:br)), :all, 'target="_blank"')
     = image_tag page.image.url, class: 'page-box__text--image' if page.image.present?

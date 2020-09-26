@@ -1,9 +1,8 @@
-a {
-  text-decoration: none;
-  color: rgb(247, 247, 247);
-}
-
 .page-side {
+  a {
+    text-decoration: none;
+    color: rgb(247, 247, 247);
+  }
   width: 300px;
   .side-header {
     height: 100px;
