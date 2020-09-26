@@ -1,7 +1,3 @@
 .SettingGroupForm
   %h1 新規ノート作成
   = render partial: 'form', locals: { note: @note }
-
--# = form_with model: @note, local: true do |f|
--#   = f.text_field :name, class: "SettingGroupForm__input", placeholder: "ノート名を入力してください"
--#   = f.submit "Save", class: "SettingGroupForm__button"
