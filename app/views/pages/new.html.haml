@@ -5,9 +5,9 @@
     = form_with model: [@note, @page], html: {class: "input-box"}, local: true do |f|
       = f.text_field :title, class: 'input-box__title', placeholder: 'タイトル', autofocus: true
       .input-box__post
-        = f.text_area :text, class: 'input-box__post__text', placeholder: 'ここにノートを取りましょう'
+        .input-box__post__text
+          = f.text_area :text, class: 'input-box__post__text--contents', placeholder: 'ここにノートを取りましょう'
         .input-box__post__function
           = f.label :image, class: 'input-box__post__function__image' do
-            = icon('far', 'image')
             = f.file_field :image, class: 'input-box__post__function__image--file'
-          = f.submit '投稿', class: 'input-box__post__function__btn'
+        = f.submit '作成', class: 'input-box__post__function__btn'
