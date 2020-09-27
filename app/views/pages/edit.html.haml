@@ -5,7 +5,7 @@
     = form_with model: [@note, @page], html: {class: "input-box"}, local: true do |f|
       = f.text_field :title, class: 'input-box__title', autofocus: true
       .input-box__post
-        = f.text_area :text, class: 'input-box__post__text'
+        = f.text_area :text, wrap: 'hard', class: 'input-box__post__text'
         .input-box__post__function
           = f.label :image, class: 'input-box__post__function__image' do
             = icon('far', 'image')
