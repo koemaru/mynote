@@ -29,6 +29,13 @@
       }
     }
   }
+  .main-note {
+    font-style: italic;
+    font-weight: bold;
+    line-height: 40px;
+    background-color: rgb(70, 255, 255);
+    padding-left: 20px;
+  }
   .main-pages{
     a {
       text-decoration: none;
@@ -43,7 +50,7 @@
       &__header {
         background-color: #fdc896;
         padding-bottom: 5px;
-        font-size: 18px;
+        font-size: 16px;
         display: flex;
         justify-content: space-between;
         &--title {
