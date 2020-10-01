@@ -1,7 +1,8 @@
 .page-side {
+  $side-font-color: #fff;
   a {
     text-decoration: none;
-    color: rgb(247, 247, 247);
+    color: $side-font-color;
   }
   width: 300px;
   .side-header {
@@ -16,7 +17,7 @@
       width: 260px;
       border-radius: 10px;
       background-color: #000;
-      color: #fff;
+      color: $side-font-color;
       margin: 0 20px;
       &__username {
         margin-left: 20px;
@@ -26,10 +27,9 @@
       }
       &__right {
         position: relative;
+        right: 10px;
         cursor: pointer;
         display: block;
-        top: 0px;
-        right: 10px;
         z-index: 2;
         text-align: right;
         &--list {
@@ -51,7 +51,7 @@
     &__box {
       padding: 0 20px;
       &__newnote {
-        color: #fff;
+        color: $side-font-color;
         line-height: 30px;
         font-size: 15px;
         margin: 20px 0 30px 0;

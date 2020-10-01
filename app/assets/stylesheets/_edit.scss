@@ -5,7 +5,7 @@
     flex-direction: column;
     &__title {
       width: 600px;
-      margin: 40px 0 40px 0;
+      margin: 40px 0;
       padding: 5px 0;
       border-bottom: 2px solid #ffcaa7;
     }
@@ -47,7 +47,7 @@
           height: 40px;
           background-color: #e67c35;
           border-radius: 5px;
-          color: #eeeeee;
+          color: #fff;
           cursor: pointer;
         }
       }
