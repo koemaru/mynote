@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def index
     @page = Page.new
-    @pages = @note.pages.includes(:user).order("updated_at DESC")
+    @pages = @note.pages.includes(:user).order("created_at DESC")
   end
 
   def new

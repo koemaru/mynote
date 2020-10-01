@@ -3,7 +3,7 @@
   .main-header {
     a {
       text-decoration: none;
-      color: rgb(247, 247, 247);
+      color: #fff;
     }
     height: 100px;
     padding: 0 40px;
@@ -40,7 +40,7 @@
     a {
       text-decoration: none;
     }
-    height: calc(100vh - 100px);
+    height: calc(100vh - 100px - 40px);
     background-color: #fffff7;
     overflow: scroll;
     .page-box {
@@ -74,8 +74,6 @@
         padding-top: 10px;
         &--content {
           font-size: 16px;
-        }
-        &--image {
         }
       }
     }
